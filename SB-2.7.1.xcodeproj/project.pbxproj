@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8281722273AA0660029DE2D /* FullInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8281721273AA0660029DE2D /* FullInfoTableViewController.swift */; };
+		F849F8A0273AE00500602D73 /* ShortInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F849F89F273AE00500602D73 /* ShortInfoTableViewController.swift */; };
+		F849F8A4273AE78100602D73 /* ShortInfoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F849F8A3273AE78100602D73 /* ShortInfoDetailsViewController.swift */; };
 		F888F1792739CA0000DB5F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F888F1782739CA0000DB5F3C /* AppDelegate.swift */; };
 		F888F17B2739CA0000DB5F3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F888F17A2739CA0000DB5F3C /* SceneDelegate.swift */; };
-		F888F17D2739CA0000DB5F3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F888F17C2739CA0000DB5F3C /* ViewController.swift */; };
+		F888F17D2739CA0000DB5F3C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F888F17C2739CA0000DB5F3C /* MainViewController.swift */; };
 		F888F1802739CA0000DB5F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F888F17E2739CA0000DB5F3C /* Main.storyboard */; };
 		F888F1822739CA0100DB5F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F888F1812739CA0100DB5F3C /* Assets.xcassets */; };
 		F888F1852739CA0100DB5F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F888F1832739CA0100DB5F3C /* LaunchScreen.storyboard */; };
@@ -18,10 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F8281721273AA0660029DE2D /* FullInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullInfoTableViewController.swift; sourceTree = "<group>"; };
+		F849F89F273AE00500602D73 /* ShortInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortInfoTableViewController.swift; sourceTree = "<group>"; };
+		F849F8A3273AE78100602D73 /* ShortInfoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortInfoDetailsViewController.swift; sourceTree = "<group>"; };
 		F888F1752739CA0000DB5F3C /* SB-2.7.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SB-2.7.1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F888F1782739CA0000DB5F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F888F17A2739CA0000DB5F3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F888F17C2739CA0000DB5F3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F888F17C2739CA0000DB5F3C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F888F17F2739CA0000DB5F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F888F1812739CA0100DB5F3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F888F1842739CA0100DB5F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,6 +47,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F849F8A1273AE02900602D73 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F888F17C2739CA0000DB5F3C /* MainViewController.swift */,
+				F8281721273AA0660029DE2D /* FullInfoTableViewController.swift */,
+				F849F8A3273AE78100602D73 /* ShortInfoDetailsViewController.swift */,
+				F849F89F273AE00500602D73 /* ShortInfoTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F849F8A2273AE04600602D73 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F888F18C2739CD3C00DB5F3C /* Model.swift */,
+				F888F18E2739CE5A00DB5F3C /* DataManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		F888F16C2739CA0000DB5F3C = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +86,14 @@
 		F888F1772739CA0000DB5F3C /* SB-2.7.1 */ = {
 			isa = PBXGroup;
 			children = (
-				F888F1782739CA0000DB5F3C /* AppDelegate.swift */,
-				F888F17A2739CA0000DB5F3C /* SceneDelegate.swift */,
-				F888F17C2739CA0000DB5F3C /* ViewController.swift */,
+				F849F8A2273AE04600602D73 /* Data */,
+				F849F8A1273AE02900602D73 /* ViewControllers */,
 				F888F17E2739CA0000DB5F3C /* Main.storyboard */,
 				F888F1812739CA0100DB5F3C /* Assets.xcassets */,
 				F888F1832739CA0100DB5F3C /* LaunchScreen.storyboard */,
 				F888F1862739CA0100DB5F3C /* Info.plist */,
-				F888F18C2739CD3C00DB5F3C /* Model.swift */,
-				F888F18E2739CE5A00DB5F3C /* DataManager.swift */,
+				F888F17A2739CA0000DB5F3C /* SceneDelegate.swift */,
+				F888F1782739CA0000DB5F3C /* AppDelegate.swift */,
 			);
 			path = "SB-2.7.1";
 			sourceTree = "<group>";
@@ -144,10 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F888F17D2739CA0000DB5F3C /* ViewController.swift in Sources */,
+				F849F8A4273AE78100602D73 /* ShortInfoDetailsViewController.swift in Sources */,
+				F888F17D2739CA0000DB5F3C /* MainViewController.swift in Sources */,
 				F888F18F2739CE5A00DB5F3C /* DataManager.swift in Sources */,
 				F888F1792739CA0000DB5F3C /* AppDelegate.swift in Sources */,
+				F849F8A0273AE00500602D73 /* ShortInfoTableViewController.swift in Sources */,
 				F888F17B2739CA0000DB5F3C /* SceneDelegate.swift in Sources */,
+				F8281722273AA0660029DE2D /* FullInfoTableViewController.swift in Sources */,
 				F888F18D2739CD3C00DB5F3C /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

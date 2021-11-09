@@ -12,7 +12,7 @@ struct Person {
     let phone: String
     
     var fullName: String {
-        "\(name) \(surname)"
+        "\(firstname) \(lastname)"
     }
 }
 
