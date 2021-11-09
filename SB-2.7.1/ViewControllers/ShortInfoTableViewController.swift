@@ -10,13 +10,19 @@ import UIKit
 class ShortInfoTableViewController: UITableViewController {
     
     var persons: [Person]!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailsVC = segue.destination as? ShortInfoDetailsViewController else { return }
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         detailsVC.person = persons[indexPath.row]
+        detailsVC.hidesBottomBarWhenPushed = true
+        modifyBackButton()
     }
-
+        
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         persons.count
@@ -32,5 +38,11 @@ class ShortInfoTableViewController: UITableViewController {
         cell.contentConfiguration = content
 
         return cell
+    }
+    
+    private func modifyBackButton() -> Void {
+        let backItem = UIBarButtonItem()
+        backItem.title = "back"
+        navigationItem.backBarButtonItem = backItem
     }
 }
