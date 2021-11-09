@@ -10,11 +10,7 @@ import UIKit
 class ShortInfoTableViewController: UITableViewController {
     
     var persons: [Person]!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
+ 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailsVC = segue.destination as? ShortInfoDetailsViewController else { return }
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
