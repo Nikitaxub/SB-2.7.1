@@ -13,7 +13,7 @@ class MainViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewControllers?.forEach {
+        viewControllers?.forEach {
             guard let tabNavigationVC = $0 as? UINavigationController else { return }
             if let fullInfoVC = tabNavigationVC.topViewController as? FullInfoTableViewController {
                 fullInfoVC.persons = persons
